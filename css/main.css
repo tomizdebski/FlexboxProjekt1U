@@ -40,6 +40,12 @@ html {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 799px) {
+  .search {
+    flex-basis: 100%;
+    order: -1;
+  }
+}
 .search__input {
   flex-basis: 60%;
   height: 50%;
@@ -181,6 +187,11 @@ html {
 .main-articles .article {
   flex-basis: 50%;
 }
+@media (max-width: 799px) {
+  .main-articles .article {
+    flex-basis: 100%;
+  }
+}
 
 .article-list {
   flex-basis: 100%;
@@ -190,6 +201,16 @@ html {
 }
 .article-list__article {
   flex-basis: 30%;
+}
+@media (max-width: 1023px) {
+  .article-list__article {
+    flex-basis: 45%;
+  }
+}
+@media (max-width: 799px) {
+  .article-list__article {
+    flex-basis: 95%;
+  }
 }
 
 .footer {
