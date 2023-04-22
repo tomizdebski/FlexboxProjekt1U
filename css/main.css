@@ -125,6 +125,9 @@ html {
   color: #333;
   text-align: center;
 }
+.article--small {
+  padding: 20px 30px;
+}
 .article__image {
   display: block;
   width: 100%;
@@ -135,9 +138,29 @@ html {
   font-size: 3rem;
   padding: 35px 0 15px;
 }
+.article--small .article__title {
+  padding: 25px 0 10px;
+  font-size: 1.8rem;
+  background-color: #8daae5;
+}
 .article__introduction {
   line-height: 1.6;
   font-size: 1.6rem;
+}
+.article__btn {
+  display: block;
+  margin: 10px auto;
+  width: 50%;
+  min-width: 200px;
+  font-size: 1.8rem;
+  border: 2px solid black;
+  padding: 6px 12px;
+  background-color: #8daae5;
+  color: #000;
+  text-decoration: none;
+}
+.article__btn:hover {
+  background-color: #fff;
 }
 
 .main-articles {
@@ -161,10 +184,39 @@ html {
 
 .article-list {
   flex-basis: 100%;
-  background-color: rgb(182, 131, 36);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.article-list__article {
+  flex-basis: 30%;
 }
 
 .footer {
-  background-color: rgb(75, 67, 192);
+  background-color: #8daae5;
   flex-basis: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 20px 0;
+}
+.footer .sm-links {
+  flex-basis: 30%;
+}
+
+.sm-links {
+  font-family: "pt sans", "roboto", arial, sans-serif;
+  padding: 20px;
+}
+.sm-links--darken {
+  background-color: #2d5fc5;
+}
+.sm-links__title {
+  margin: 20px 0 40px;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.sm-links__item {
+  text-indent: 40px;
+  font-size: 1.8rem;
 }/*# sourceMappingURL=main.css.map */

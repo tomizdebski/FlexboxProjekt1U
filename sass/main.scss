@@ -140,6 +140,9 @@ html {
     padding: 30px 50px;
     color: #333;
     text-align: center;
+    &--small {
+        padding: 20px 30px;
+    }
     &__image {
         display: block;
         width: 100%; 
@@ -149,10 +152,32 @@ html {
         text-transform: uppercase;
         font-size: 3rem;
         padding: 35px 0 15px;
+        .article--small & {
+            padding: 25px 0 10px;
+            font-size: 1.8rem;
+            background-color: $main-color;
+        }
     }
     &__introduction {
         line-height: 1.6;
         font-size: 1.6rem;
+    } 
+    &__btn {
+        display: block;
+        margin: 10px auto; // wysrodkowanie elementu blokowego
+        width: 50%;
+        min-width: 200px;
+        font-size: 1.8rem;
+        border: 2px solid black;
+        padding: 6px 12px;
+        background-color: $main-color;
+        color:#000;
+        text-decoration: none;
+        &:hover {
+            
+            background-color: #fff;
+        }
+        
     }
 
 }
@@ -178,10 +203,42 @@ html {
 
 .article-list {
     flex-basis: 100%;
-    background-color: rgb(182, 131, 36);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    &__article {
+        flex-basis: 30%;
+        //flex-grow: 1;
+    }
 }
 
 .footer {
-    background-color: rgb(75,67,192);
+    background-color: $main-color;
     flex-basis: 100%;
+    display:flex;
+    justify-content: space-around;
+    padding: 20px 0;
+    .sm-links {
+        flex-basis: 30%;
+        
+    }
 } 
+
+.sm-links {
+    font-family: $special-font;
+    padding: 20px;
+    &--darken {
+        background-color: darken($main-color, 25%);
+    }
+     &__title {
+        margin: 20px 0 40px;
+        font-size: 2.4rem;
+        text-transform: uppercase;
+        font-weight: 400;
+     }
+     &__item {
+        text-indent: 40px;
+        font-size: 1.8rem;
+     }
+    
+}
